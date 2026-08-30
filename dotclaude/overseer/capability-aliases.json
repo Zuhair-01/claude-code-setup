@@ -1,0 +1,17 @@
+{
+  "description": "Intentional live/library promotion aliases. Do not route both copies as independent capabilities.",
+  "aliases": [
+    {"name": "brandkit", "canonical": "skills/brandkit", "source": "skills-library/brandkit"},
+    {"name": "brutalist-skill", "canonical": "skills/brutalist-skill", "source": "skills-library/brutalist-skill"},
+    {"name": "gpt-tasteskill", "canonical": "skills/gpt-tasteskill", "source": "skills-library/gpt-tasteskill"},
+    {"name": "image-to-code-skill", "canonical": "skills/image-to-code-skill", "source": "skills-library/image-to-code-skill"},
+    {"name": "imagegen-frontend-mobile", "canonical": "skills/imagegen-frontend-mobile", "source": "skills-library/imagegen-frontend-mobile"},
+    {"name": "imagegen-frontend-web", "canonical": "skills/imagegen-frontend-web", "source": "skills-library/imagegen-frontend-web"},
+    {"name": "minimalist-skill", "canonical": "skills/minimalist-skill", "source": "skills-library/minimalist-skill"},
+    {"name": "output-skill", "canonical": "skills/output-skill", "source": "skills-library/output-skill"},
+    {"name": "soft-skill", "canonical": "skills/soft-skill", "source": "skills-library/soft-skill"},
+    {"name": "stitch-skill", "canonical": "skills/stitch-skill", "source": "skills-library/stitch-skill"},
+    {"name": "taste-skill", "canonical": "skills/taste-skill", "source": "skills-library/taste-skill"},
+    {"name": "taste-skill-v1", "canonical": "skills/taste-skill-v1", "source": "skills-library/taste-skill-v1"}
+  ]
+}

@@ -1,0 +1,98 @@
+# Memory Index
+
+- [Alwazour Technical IG strategy — 2026-08-29](project_alwazour_technical_instagram_strategy_2026_08_29.md) — client (not studio) product Instagram plan; 14 pieces + video scripts + 4-week schedule + Arabic PDF; ChatGPT SMM review cycle 1 done.
+- [SMM review lessons](feedback_smm_review_lessons.md) — durable content-drafting principles from the ChatGPT social-media-manager review loop (hooks, zero-fabrication verbs, carousel-vs-reel, cadence).
+- [ChatGPT consult paste workflow](feedback_chatgpt_consult_paste_workflow.md) — Claude drafts the prompt, Zoher pastes into ChatGPT + Ctrl+A/C the reply back into chat; never browser-extract (5x token cost).
+- [Alwazour-studio "finish it fully" run — 2026-08-30](project_alwazour_studio_cinematic_scroll_2026_08_30.md) — HEAD ~f8941e1: Dania/Kyros/pricing fixes, Start-Project 5-step rebuild, GSAP cinematic scroll layer, leads-DB timeout, hero Earth video (b47396c), Kyros card image. Vault: "Multi-Session Run — Alwazour 2026-08-30.md" (protocol+lessons) + "10-10 Upgrade Program.md" (Zoher's 36-pt checklist, phased A-E, next multi-session program). Blocked on Zoher: real client testimonial.
+- [Alwazour admin low-vision pass — 2026-08-29](project_alwazour_admin_low_vision_2026_08_29.md) — admin panel only: rem-based readable type floor + A/A+/A++ text-size toggle + Arabic bigger/bolder; server/ not committed.
+- [5 Pillars curriculum — 2026-08-29](project_5_pillars_curriculum.md) — security/DB/payments/email/marketing mastery doc + upgraded marketing-psychology skill + new social-growth-science + content-factory skills; shareable artifact published.
+- [artifact-quality skill — 2026-08-30](project_artifact_quality_skill.md) — anti-slop engine for published Artifacts (single-file claude.ai HTML): medium constraints + 10-tell slop signature + 11 per-category playbooks; wired into taste-skill 13.A / skill-router / OVERSEER.
+- [archify diagram skill — 2026-08-30](project_archify_diagram_skill.md) — tt-a1i/archify installed as live skill (arch/workflow/sequence/dataflow/lifecycle diagrams + Mermaid beautify, zero deps); wired into skill-router + OVERSEER.
+- [Secure-by-default build gate — 2026-08-29](project_secure_by_default_gate.md) — secure-by-default skill + UserPromptSubmit + PostToolUse hooks that fire on every code build to prevent security mistakes live; CLAUDE.md Rule 8 now build-time + pre-ship.
+
+- [CC ecosystem gaps — 2026-08-30](reference_cc_ecosystem_gaps.md) — sweep: skills/agents saturated (don't bulk-import), MCP-server layer is the real gap; Tier-1 = Serena, Playwright-MCP, GitHub-MCP, Repomix, chrome-devtools-mcp.
+- [DB/deploy alternatives — 2026-08-29](reference_db_deploy_alternatives.md) — Neon vs Supabase free tiers, Vercel vs Railway/Render for Express APIs; folded into Free_Tier_Stack.md, not a standalone doc.
+- [Alwazour-studio auto push — 2026-08-29](feedback_alwazour_studio_auto_push.md) — always commit+push each fix immediately in this repo, no confirmation step.
+- [Git commit scope pathspec — 2026-08-28](feedback_git_commit_scope_pathspec.md) — `git add <paths>` doesn't scope `git commit`; must pass `-- <paths>` to commit too, or a peer session's staged files ride along.
+- [Scoped process kill — 2026-08-28](feedback_scoped_process_kill.md) — never blanket taskkill/pkill by process name; scope to the exact PID, shared box runs concurrent sessions.
+- [Broadcast-only cross-session comms — 2026-08-28](feedback_broadcast_only_no_held_messages.md) — SendMessage to Remote-Control peers can be held pending their user's approval; use Handoff Log as the reliable channel.
+- [business-iq-owner-metrics skill — 2026-08-28](reference_business_iq_owner_metrics_skill.md) — owner-level finance metrics (unit econ / revenue quality / cash mechanics) reference from a bryson.bowman IG reel.
+
+- [Gemini free-tier media gen — 2026-08-27](reference_gemini_free_tier_media_gen.md) — AI Studio key (no GCP billing) gives free Imagen+Veo image/video gen, rate-limited; key pending from Zoher.
+- [Google skills marketplace — 2026-08-27](reference_google_skills_marketplace.md) — google/skills added, google-cloud-developer + gemini-api installed; per-DB plugins (bigquery/spanner/etc) install on-demand per future project.
+- [China image-price sourcing tools — 2026-08-27](reference_china_image_price_sourcing.md) — AliPrice/AiPrice + Alibaba Lens already do this; don't build a scraper, needs Zoher's own Chrome click-through.
+- [Supabase accounts registry — 2026-08-26](reference_supabase_accounts.md) — 2 accounts (axissummer, bizwithzuhair), which projects live under each, check before creating a new one.
+- [3-way OSS sweep — EXECUTED 2026-08-26](project_3way_oss_sweep_consolidated_2026_08_26.md) — Gitleaks/Trivy/Renovate/MCP servers/Silktide/Vikunja/Weblate/Mailpit/Presenton/Reacher installed+committed+pushed; SadTalker held (license+download).
+- [No large downloads — 2026-08-26](feedback_no_large_downloads.md) — never pull 1GB+ model weights/files without explicit confirmation first, standing rule.
+- [Free/OSS Dev-Ops Stack — 2026-08-26](project_free_oss_devops_stack_2026_08_26.md) — dev-ops lane of 3-session sweep; curated OVERSEER skill + paid-dep audit (clip-platform/alwazour/Kyros clean, Ostazi not locally cloneable).
+- [Free/OSS AI Stack Research — 2026-08-26](project_free_oss_ai_stack_research_2026_08_26.md) — 3-session sweep; my lane added 6 OVERSEER skills (litellm-gateway, lancedb-vector-db, letta-agent-memory, unsloth-local-finetuning, deepeval-rag-testing, microsandbox-code-exec); closed per Zoher's redirect off model-download topics.
+- [OSS Media-Gen Stack — 2026-08-26](project_oss_media_gen_stack_2026_08_26.md) — my lane of the 3-session split: video-gen/avatar/lip-sync/bg-removal/upscaling/captions OSS picks, added `oss-media-gen-stack` skill to OVERSEER.
+- [Self-hosted n8n + NocoDB — 2026-08-25](project_selfhosted_n8n_nocodb.md) — running locally via Docker (localhost:5678, :8080), replaces Zapier/Airtable; owner-account setup pending.
+- [CLI-Anything + CLI-Hub — 2026-08-25](reference_cli_anything_hub.md) — global 103-CLI registry + generator plugin, check before hand-building any third-party wrapper. `ollama` CLI installed.
+- [Voice Cloning: OpenVoice + Voicebox — 2026-08-24](project_voice_cloning_openvoice_voicebox.md) — both set up + registered in OVERSEER (`voice-cloning-local` skill); Voicebox primary (Arabic-capable), launch via voicebox_launch.py only.
+- [Multi-session orchestration — 2026-08-24](feedback_multi_session_orchestration.md) — user controls when/how many parallel Claude sessions open; no Agent tool; OpenCode is a parallel alt-CLI in same env.
+- [Vault Search (turbovec) — 2026-08-24](reference_vault_search_turbovec.md) — semantic search over Second_Brain, live as `vault-search` skill, auto-announce on use.
+- [AI Clone via HeyGen — 2026-08-24](project_ai_clone_heygen.md) — real-likeness reel clone; blocked on Zoher recording HeyGen's webcam avatar+voice clone step; use `heygen-clone-reel` skill next.
+- [Hand-SVG + Playwright render for banners](feedback_banner_svg_playwright_render.md) — confirmed: hand-coded SVG design + Playwright PNG export at exact target dims is the frontend-asset bar to hit again.
+- [Low-context handoff + continue-prompt](feedback_low_context_handoff.md) — when context runs low, write the Handoff Log entry AND a ready-to-paste continue-prompt so the next session resumes instantly.
+- [User drives AI-gen tools](feedback_user_drives_ai_gen_tools.md) — on Flow/Veo/image-gen etc, Claude navigates+guides, user clicks/prompts, unless told to go fully autonomous.
+- [alwazour photo/UX fixes + AI video-gen skill — 2026-08-22](project_alwazour_2026_08_22.md) — search-icon/catalog-dedup/racks-cabinets shipped+live; ai-video-prompt-engineering skill built (renamed 2026-08-29 → `veo-flow-free-video-gen`, more discoverable). Hero-video state here is stale, see 08-25 entry below.
+- [alwazour category sweep — 2026-08-23](project_alwazour_2026_08_23_sweep.md) — HDMI/accessories/extenders/cabinets duplicate-photo bugs fixed via PO ground truth; 3-4 concurrent sessions coordinated cleanly via broadcast protocol.
+- [alwazour diagram-accuracy pass — 2026-08-24](project_alwazour_diagram_accuracy_pass.md) — separate thread; 202/202 SKU exhaustive programmatic sweep (family cross-check + photo-hash dedup) done, zero bugs, reusable method documented.
+- [alwazour hero video — 2026-08-25](project_alwazour_hero_video_2026_08_25.md) — DONE, live: 3-shot cinematic Flow sequence wired into motion.ts, verified in-browser. Not yet committed/pushed — coordinated multi-session push pending.
+- [No-ground-truth → downgrade, don't guess](feedback_no_ground_truth_downgrade_placeholder.md) — when duplicate/conflicting data has no authoritative source to resolve it, fall back to the honest unconfirmed state instead of picking one arbitrarily.
+- [Check before download](feedback_check_before_download.md) — always check for existing installs/deps/tools before running any install/download command, hard rule.
+- [Alwazour 3D placement fix](feedback_alwazour_3d_placement.md) — 3D/scroll experience goes in the existing scroll-story diagram slot, never over the hero photo; placeholder geometry must show real connector detail, not a plain box.
+
+- [Growth OS Registry v0.1 — 2026-08-19](project_growth_os_registry.md) — real engine.py+YAML infra already existed at Empire_Base/growth-os; council-approved registry layer added on top (brand/evidence/content.md + shared cross-project lessons), not a new platform.
+- [BRAND.md standard](reference_thebrand_md_standard.md) — open schema for brand.md files, adopted instead of inventing one.
+- [Enterprise Suite — DEPRIORITIZED 2026-08-20](project_enterprise_suite.md) — Zoher killed it, focus is Kyros+Ostazi only. Backend salvageable if ever resumed, frontend was never visually verified.
+- [No blind frontend claims](feedback_no_blind_frontend_claims.md) — never build/imply UI quality without an actual visual check; say tool gaps upfront, not as after-the-fact caveats.
+- **[ULTIMATE Frontend Master Spec — 122 points](frontend_master_spec.md) — Complete frontend science, 2026-08-20. Use for EVERY frontend build.**
+- [Local Playwright screenshots](reference_local_playwright_screenshots.md) — headless Playwright fully installed+verified 2026-08-20, self-controlled visual verification, no Chrome extension needed. Use for ALL frontend/motion/3D work.
+
+- [Ostazi deploy workflow](feedback_ostazi_deploy_workflow.md) — ostazi-edu.com prod must stay always-on; deploy changes to Vercel preview first, only push prod when explicitly told.
+- [Ostazi audit-log + cron sweep — 2026-08-18](project_ostazi_audit_log_cron_2026.md) — shipped+live: admin audit log, booking/group-session auto-complete cron. Test suite fix + deploy-reliability update: see the 08-19 entry below.
+- [Ostazi RUN 1 → Go-Live — 2026-08-19](project_ostazi_run1_golive_2026.md) — audit found feature-factory + fake seed "verified" tutors; wedge=Damascus Bac science; shipped demand-capture pipeline+fixes, live. Next: Zoher's Go-Live Kit steps, then RUN 2 only once real demand data exists.
+- [Ponytail plugin — 2026-08-18](project_ponytail_plugin.md) — code-minimalism Claude Code plugin, user-scope, mode=full, active next session.
+- [OpenCode delegation system](feedback_opencode_delegation.md) — triage tasks by complexity: delegate self-contained/mechanical work to OpenCode (background, saves tokens), keep hard/ambiguous work on Claude. Full system in vault.
+- [Autonomous phase continuation](feedback_autonomous_phase_continuation.md) — keep working through a backlog item-by-item without waiting for "continue" each time; stop only for real blockers.
+- [OVERSEER library before hand-build](feedback_overseer_library_before_hand_build.md) — check dormant skills-library (not just live skills) before hand-building frontend/design work; reinforces CLAUDE.md Rule 6 with the OTP-reel gap case.
+- [Reel Intent Analyzer skill](skill_reel_intent_analyzer.md) — video/reel content+intent + dev-tutorial repo extraction, lives in OVERSEER library (search.py to pull, not always loaded).
+- [open-pinterest repo + mandatory frontend routing](project_open_pinterest_repo.md) — public plugin repo w/ video+bg-removal; CLAUDE.md Rule 7/9 now require it before frontend visual builds.
+- [Skill lifecycle discipline — 2026-08-25](feedback_skill_lifecycle_discipline.md) — always route+activate every needed skill per task, drop finished ones, never work raw.
+- [Apex Frontend Lab — 2026-08-24](project_apex_frontend_lab.md) — opencode-owned cross-tool taste/protocol/patterns system; opencode drives build/study loop, Claude just wired in via BUNDLE-B-frontend.
+- [Local Dev Tools installed](project_local_dev_tools.md) — confirmed tools on this Windows box (git/gh/node/docker/rg/fzf/PowerToys etc); don't re-check before using.
+
+- [Empire Base Agency](project_empire_base_agency.md) — 4-pillar agency: Clipping Factory, AI-UGC, Arabic Localization, B2B Netherlands. Active vault: C:\Users\Zoher\Desktop\Empire_Base\
+- [No Agent Unless Asked](feedback_no_agent_unless_asked.md) — don't spawn Agent for inline-doable work; cold-start agents cost 20x+ tokens vs doing it directly.
+- [Skill Bundle System — 2026-08-10](project_skill_bundle_system_2026.md) — 5 consolidated bundles + OmniRoute gateway. Replaces agent-based routing with command-by-command execution. Target: 60-70% token reduction (150k → 45-50k/session). Master docs: SYSTEM-INTEGRATION-MASTER-PLAN.md + SKILL-BUNDLES-INDEX.md + EXTERNAL-REPO-INTEGRATION-PLAN.md
+- [Empire Automaton Integration](project_empire_automaton.md) — Self-improving agent loop + /autopilot + /skill-hunter + /council + /self-heal + /verify skills at C:\Users\Zoher\.claude\skills\
+- [Higgsfield UGC Skills Pack](project_higgsfield_skills.md) — 19 skills installed: full UGC pipeline, Seedance 2.0 automation, 15 prompt styles. Auto-select by task type. Playwright MCP active.
+- [GitHub Trending Installs Apr 2026](project_trending_installs.md) — karpathy-skills + superpowers + claude-mem plugins live. Voicebox v0.4.5 (local TTS, Arabic) MSI at Desktop/Empire_Base/.
+- [AXIS AI OS v9 (superseded)](project_axis_ai_os.md) — old Docker Ollama+OpenWebUI+ChromaDB plan; path no longer exists. See Open Axis control-plane below.
+- [Open Axis control-plane](project_open_axis_control_plane.md) — real current system at C:\AI\control-plane: multi-CLI dispatcher (claude/codex/opencode/ollama), dry_run-by-default, GPU-lock wired.
+- [OpenTrade Skills Pack](project_opentrade_skills.md) — 8 enhanced TradingView/CDP skills from github.com/brandononchain/opentrade. Saved to C:\Users\Zoher\.claude\skills\opentrade-*.md
+- [Marketing Skills Pack](project_marketing_skills.md) — 40 skills from github.com/coreyhaines31/marketingskills. Auto-select by task type. All live in C:\Users\Zoher\.claude\skills\
+- [Clip Platform](project_clip_platform.md) — AI clipping SaaS at Desktop/Empire_Base/clip-platform. **v1.0.0+; 2026-07-17 shipped: multi-speaker CUTTING (frame cuts to active speaker), GPU transcribe (device=cuda, 6.5x), render resilience+NVENC fallback, per-platform post captions (TikTok/Reels/Shorts, full stack+copy UI), docs/EDITING-MASTERY.md.** **2026-08-20: footage track VERIFIED LIVE end-to-end (import→drag→re-render, real output confirmed) — closes the "is this a mock" concern from 2026-08-03.** Real account: the_corez/2234150213616z (zacklonley owns 0 projects). NEXT: trim handles, then "re-render and watch" the payoff-bug fix (content judgment call). uv 3.12 venv; HF_HUB_OFFLINE=1.
+- [Kyros Orchestrator](project_kyros_orchestrator.md) — Master/worker loop: Claude plans + routes, local Ollama fleet executes. 8GB VRAM sequential-only. Skill: kyros-orchestrator. NO subagents (token drain).
+- [Skill Router — Always First](feedback_skill_router.md) — Invoke skill-router before EVERY substantive task. Proactive orchestrator: classify domain+action, uncapped skill stack, INVOKE or REF each skill.
+- [LEAN ENGINE v3 + Caveman-Lite + Usage Reducer](feedback_lean_engine.md) — Token efficiency: no filler, dense code, minimal reads, no preamble. Caveman-lite prose + usage-limit-reducer 11 rules baked in. Apply always.
+- [CC Switch — AI CLI Manager](project_cc_switch.md) — Desktop app for provider switching, skills GUI, session browser, MCP/prompts sync, usage tracking. Skill: cc-switch. Install MSI from GitHub releases.
+- [Skillset Upgrade Jul 2026](project_skillset_upgrade_jul2026.md) — 21 repos mined: +61 skills (gstack-*, taste-skill, career-ops), +43 agents (gsd-*, understand-*), +67 /gsd:* commands.
+- [Design Quality Bar](feedback_design_quality.md) — wants advanced/non-generic builds: real motion, deliberate color, 3D where it fits, not AI slop.
+- [Speed & Power Default](feedback_speed_and_power.md) — act fast/decisive on all tasks by default, skip long caveat essays unless truly high-stakes.
+- [Free-for-dev Default](feedback_free_for_dev_default.md) — check github.com/ripienaar/free-for-dev before paid services, any project. Summary at vault 30-Resources/Free_Tier_Stack.md.
+- [OVERSEER — BUILT 2026-07-15](project_overseer.md) — Library+Index+hook live. 27.9k → 10.5k tok/session, verified end-to-end. 3,247 items off-context, nothing deleted. Steps 6-8 (ledger/grader/evolve) not built. Spec: C:\Users\Zoher\.claude\OVERSEER-DESIGN.md
+- [No Agent for memory lookup](feedback_no_agent_for_memory_lookup.md) — Never wrap claude-mem get_observations/search in Agent tool; call MCP directly. 106k-token incident 2026-08-02.
+- [openalternative.co](reference_openalternative.md) — open-source alternatives to paid SaaS; check with free-for-dev before paying for anything.
+- [Token Efficiency — No Parallel Agents](feedback_token_efficiency.md) — one agent at a time, consume summaries only, no re-reading transcripts.
+- [Multi-System Handoff — 2026-08-15](project_multi_system_handoff.md) — 2x Claude Pro + Codex share state via vault's "Handoff Log.md". Rules in ~/.claude/CLAUDE.md + ~/.codex/AGENTS.md.
+- [AI Revenue Engine — 2026-08-20](project_ai_revenue_engine.md) — 7 repos cloned+productized. VaultMind MVP built+verified (Ollama-backed RAG, real embed widget). Plan at vault 10-Projects/AI_Revenue_Engine/MASTER_PLAN.md.
+- [Use own tools before builtin](feedback_use_own_tools_before_builtin.md) — check self-hosted services (Firecrawl etc) and OVERSEER/skills before defaulting to WebSearch or hand-building.
+- [Empire_Base git remote — 2026-08-17](project_empire_base_git_remote.md) — origin now set to github.com/Zuhair-01/Empire_Base (private). Normal `git push` unblocked globally, only --force still denied.
+- [Shared GPU lock system — 2026-08-17](project_gpu_lock_system.md) — D:\AI_Models\gpu_lock.py mutex wired into MiniMax H3, Kyros, clip-platform, Open Axis. git-bash $$ != real Windows pid gotcha documented.
+- [Local MiniMax H3 — 2026-08-17](project_minimax_h3_local.md) — GGUF Q3_K_M+Q2_K set downloading to D:\AI_Models\MiniMax-H3 (~30GB). Gated by GPU lock, run_minimax.sh refuses unless safe. ComfyUI runner not yet installed.
+- [Vercel/GitHub commit email block](feedback_vercel_github_commit_email.md) — "fetch failed" on vercel deploy can mean the commit email isn't verified on GitHub; check the dashboard, use the noreply email form.
+- [axissummer universal account](project_axissummer_universal_account.md) — use axissummer identity for all GitHub/Vercel commits going forward, not ad-hoc personal emails.
+- [Public API directories](reference_public_api_directories.md) — public-apis, public-api-lists, openapi-directory: check before scraping/paying for a data source.

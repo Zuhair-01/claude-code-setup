@@ -1,0 +1,3 @@
+# Empire Self-Heal Error Log
+# Format: [timestamp]|[severity]|[category]|[description]|[fix_applied]|[result]
+# Auto-managed by /self-heal — do not edit manually

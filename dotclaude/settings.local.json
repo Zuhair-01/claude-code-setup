@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__second-brain__list_allowed_directories",
+      "mcp__second-brain__create_directory",
+      "WebSearch",
+      "mcp__second-brain__write_file",
+      "mcp__second-brain__list_directory",
+      "mcp__n8n__search_templates",
+      "mcp__second-brain__directory_tree",
+      "mcp__second-brain__read_file",
+      "Skill(update-config)",
+      "Bash(ollama list *)",
+      "Bash(yt-dlp --version)",
+      "WebFetch(domain:sp-today.com)"
+    ],
+    "defaultMode": "bypassPermissions"
+  },
+  "disableClaudeAiConnectors": true
+}

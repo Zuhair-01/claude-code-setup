@@ -1,0 +1,169 @@
+{
+  "version": "2026-08-10",
+  "purpose": "OmniRoute intelligent routing with quality gates + free tier usage",
+
+  "compression": {
+    "enabled": true,
+    "rtk": true,
+    "caveman": true,
+    "target_reduction_percent": 65,
+    "monitor": true
+  },
+
+  "provider_chain": {
+    "primary": "claude-opus-5",
+    "strategy": "balanced",
+    "tiers": [
+      {
+        "tier": 0,
+        "provider": "claude-opus-5",
+        "type": "premium",
+        "cost_per_1k_tokens": 0.03,
+        "quality_rating": 9.8,
+        "use_for": ["security", "complex_code", "production", "medical", "legal", "financial_decisions"]
+      },
+      {
+        "tier": 1,
+        "provider": "claude-sonnet-5",
+        "type": "standard",
+        "cost_per_1k_tokens": 0.015,
+        "quality_rating": 9.5,
+        "use_for": ["general", "technical", "code_review", "architecture"]
+      },
+      {
+        "tier": 2,
+        "provider": "gemini-2.0-flash",
+        "type": "free_tier",
+        "cost_per_1k_tokens": 0,
+        "quality_rating": 8.5,
+        "use_for": ["creative", "simple_questions", "documentation", "brainstorming"],
+        "avoid_for": ["security", "medical", "legal", "production_code", "financial"]
+      },
+      {
+        "tier": 3,
+        "provider": "gpt-4-turbo",
+        "type": "free_tier",
+        "cost_per_1k_tokens": 0,
+        "quality_rating": 8.2,
+        "use_for": ["general", "creative", "documentation"],
+        "avoid_for": ["security", "medical", "legal", "code_quality"]
+      },
+      {
+        "tier": 4,
+        "provider": "claude-2.1",
+        "type": "legacy",
+        "cost_per_1k_tokens": 0.008,
+        "quality_rating": 7.5,
+        "use_for": ["fallback_only"],
+        "avoid_for": ["all_priority_tasks"]
+      }
+    ]
+  },
+
+  "quality_gates": {
+    "enabled": true,
+    "validate_all_outputs": true,
+    "reject_low_quality": true,
+    "min_quality_score": 7.0,
+
+    "task_complexity_routing": {
+      "complex": ["claude-opus-5", "claude-sonnet-5"],
+      "standard": ["claude-opus-5", "claude-sonnet-5", "gemini-2.0-flash"],
+      "simple": ["claude-opus-5", "claude-sonnet-5", "gemini-2.0-flash", "gpt-4-turbo"]
+    },
+
+    "domain_routing": {
+      "security": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5"],
+        "reason": "Security requires premium models only"
+      },
+      "medical": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5"],
+        "reason": "Medical/health safety-critical"
+      },
+      "legal": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5"],
+        "reason": "Legal liability concerns"
+      },
+      "financial": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5", "gemini-2.0-flash"],
+        "reason": "Financial decisions need accuracy"
+      },
+      "code_quality": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5"],
+        "reason": "Code review requires expertise"
+      },
+      "production": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5"],
+        "reason": "Production code needs reliability"
+      },
+      "creative": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5", "gemini-2.0-flash", "gpt-4-turbo"],
+        "reason": "Creative tasks benefit from diverse models"
+      },
+      "general": {
+        "allowed_providers": ["claude-opus-5", "claude-sonnet-5", "gemini-2.0-flash"],
+        "reason": "General tasks can use free tiers with validation"
+      }
+    },
+
+    "output_validation": {
+      "min_length": 50,
+      "max_length": 50000,
+      "check_for_placeholders": true,
+      "require_proper_formatting": true,
+      "require_code_for_dev_tasks": true,
+      "reject_incomplete": true,
+      "alert_on_truncation": true
+    },
+
+    "monitoring": {
+      "log_all_decisions": true,
+      "track_quality_per_provider": true,
+      "alert_on_low_quality": true,
+      "measure_token_savings": true,
+      "measure_cost_savings": true
+    }
+  },
+
+  "cost_optimization": {
+    "strategy": "balanced",
+    "strategies": {
+      "cheapest": "Use free tiers when rules allow, fall back to budget",
+      "balanced": "Premium for complex/critical, free for simple/safe",
+      "best": "Always use premium (ignore cost)"
+    },
+    "estimated_monthly_savings": {
+      "baseline": "$200",
+      "with_omniroute": "$65",
+      "savings_percent": 68
+    }
+  },
+
+  "fallback_behavior": {
+    "on_quota_hit": "Auto-switch to next tier (provider remains config)",
+    "on_rate_limit": "Pause and retry in 60 seconds",
+    "on_error": "Try next provider, log incident",
+    "max_retries": 3,
+    "preserve_quality": "Never degrade below min_quality_score"
+  },
+
+  "caching": {
+    "enabled": true,
+    "ttl_seconds": 3600,
+    "cache_key": "model_input_hash",
+    "avoid_cache_for": ["security_checks", "real_time_data"]
+  },
+
+  "monitoring_endpoints": {
+    "metrics": "~/.claude/overseer/metrics/omniroute-metrics.log",
+    "errors": "~/.claude/overseer/logs/omniroute-errors.log",
+    "quality_scores": "~/.claude/overseer/logs/quality-scores.log"
+  },
+
+  "integration": {
+    "skill_router": "Auto-adds quality gates to bundle selection",
+    "overseer": "Smart selector routes via quality gates",
+    "auto_bundler": "Applies domain rules to new bundles"
+  }
+}

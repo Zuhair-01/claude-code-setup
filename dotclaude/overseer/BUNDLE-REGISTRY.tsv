@@ -1,0 +1,24 @@
+kind	location	name	category	description	bundle_type
+bundle	skills	BUNDLE-A-backend-api	backend-api	Node/Python/FastAPI/Django backend development pipeline	master
+bundle	skills	BUNDLE-B-frontend-ui	web-frontend	React/Next.js/Vue UI component design system	master
+bundle	skills	BUNDLE-C-database-data	database	Database optimization, SQL, data pipelines	master
+bundle	skills	BUNDLE-D-ai-ml	ai-ml	LLM, RAG, agents, prompt engineering	master
+bundle	skills	BUNDLE-E-devops-cloud	devops-ci	Docker, Kubernetes, CI/CD, AWS/GCP/Azure	master
+bundle	skills	BUNDLE-F-video-media	media-video	Video production, clipping, animation, 3D	master
+bundle	skills	BUNDLE-G-testing-qa	testing-qa	Playwright, E2E testing, QA automation	master
+bundle	skills	BUNDLE-H-security	security	Security audit, penetration testing, compliance	master
+bundle	skills	BUNDLE-I-mobile-xr	mobile	iOS/Android/Flutter/React Native, XR/AR	master
+bundle	skills	BUNDLE-J-marketing	marketing-seo	SEO, content marketing, email, growth	master
+bundle	skills	BUNDLE-K-commerce	commerce	Stripe, e-commerce, payments, subscriptions	master
+bundle	skills	BUNDLE-L-automation	productivity	n8n, Zapier, workflow automation, integrations	master
+bundle	skills	BUNDLE-M-web3	web3	Blockchain, smart contracts, DeFi, crypto	master
+bundle	skills	BUNDLE-N-analytics	science	Analytics, data visualization, dashboards	master
+bundle	skills	BUNDLE-O-docs	docs-office	Documentation, writing, PDFs, presentations	master
+bundle	skills	BUNDLE-P-agents	meta-agent	Multi-agent orchestration, routers, dispatchers	master
+bundle	skills	BUNDLE-Z1-clipping-factory	productivity	Automated video clipping (clip-platform specific)	specialized
+bundle	skills	BUNDLE-Z2-ai-ugc	media-video	AI-generated UGC content production	specialized
+bundle	skills	BUNDLE-Z3-arabic-localization	language	Arabic/multilingual content + localization	specialized
+bundle	skills	BUNDLE-Z4-b2b-netherlands	sales-crm	B2B outreach + lead intelligence (Netherlands)	specialized
+bundle	skills	BUNDLE-Z5-scroll-world	web-frontend	3D scrollable interactive landing pages	specialized
+bundle	skills	BUNDLE-Z6-prompt-eval	ai-ml	Prompt engineering + model evaluation	specialized
+bundle	skills	BUNDLE-Z7-custom-agents	meta-agent	Build and deploy custom agents + MCP tools	specialized

@@ -1,0 +1,95 @@
+{
+  "version": 2,
+  "plugins": {
+    "claude-mem@thedotmack": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\thedotmack\\claude-mem\\12.3.9",
+        "version": "12.3.9",
+        "installedAt": "2026-04-25T00:46:22.538Z",
+        "lastUpdated": "2026-05-23T16:00:32.797Z",
+        "gitCommitSha": "8ace1d9c84e5ce455356cf852c370ea625e3b1d1"
+      }
+    ],
+    "andrej-karpathy-skills@karpathy-skills": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\karpathy-skills\\andrej-karpathy-skills\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-04-25T00:46:33.729Z",
+        "lastUpdated": "2026-05-23T16:00:32.797Z",
+        "gitCommitSha": "2c606141936f1eeef17fa3043a72095b4765b9c2"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\claude-plugins-official\\superpowers\\6.3.0",
+        "version": "6.3.0",
+        "installedAt": "2026-04-25T00:46:37.516Z",
+        "lastUpdated": "2026-08-13T12:38:09.926Z",
+        "gitCommitSha": "6efe32c9e2dd002d0c394e861e0529675d1ab32e"
+      }
+    ],
+    "vercel@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\claude-plugins-official\\vercel\\0.45.1",
+        "version": "0.45.1",
+        "installedAt": "2026-07-27T13:45:29.733Z",
+        "lastUpdated": "2026-07-27T13:45:29.733Z",
+        "gitCommitSha": "19606ac163fef2f8f967fa14ae13522d68efeccd"
+      }
+    ],
+    "ponytail@ponytail": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\ponytail\\ponytail\\4.9.0",
+        "version": "4.9.0",
+        "installedAt": "2026-08-18T12:17:33.711Z",
+        "lastUpdated": "2026-08-18T12:17:33.711Z",
+        "gitCommitSha": "2ed6c52c9d7e5e56942508591085fd45dea277d3"
+      }
+    ],
+    "flick@flick": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\flick\\flick\\7b43a68a977a",
+        "version": "7b43a68a977a",
+        "installedAt": "2026-08-21T20:07:27.846Z",
+        "lastUpdated": "2026-08-21T20:07:27.846Z",
+        "gitCommitSha": "7b43a68a977a11372dce6900fd15243cd3f053fd"
+      }
+    ],
+    "cli-anything@cli-anything": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\cli-anything\\cli-anything\\810c18b0d1ab",
+        "version": "810c18b0d1ab",
+        "installedAt": "2026-08-25T13:06:33.179Z",
+        "lastUpdated": "2026-08-25T13:06:33.179Z",
+        "gitCommitSha": "810c18b0d1ab9b234bc996c9fd999318523a3ef0"
+      }
+    ],
+    "google-cloud-developer@google-plugins": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\google-plugins\\google-cloud-developer\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-08-27T16:32:37.399Z",
+        "lastUpdated": "2026-08-27T16:32:37.399Z",
+        "gitCommitSha": "b5ed0a2f50369edf509726bd9553685e557892ed"
+      }
+    ],
+    "gemini-api@google-plugins": [
+      {
+        "scope": "user",
+        "installPath": "C:\\Users\\Zoher\\.claude\\plugins\\cache\\google-plugins\\gemini-api\\1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-08-27T16:32:38.372Z",
+        "lastUpdated": "2026-08-27T16:32:38.372Z",
+        "gitCommitSha": "b5ed0a2f50369edf509726bd9553685e557892ed"
+      }
+    ]
+  }
+}

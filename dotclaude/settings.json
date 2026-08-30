@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash",
+      "PowerShell",
+      "Read",
+      "Grep",
+      "Glob",
+      "Write",
+      "Edit",
+      "mcp__claude-in-chrome__*",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__computer",
+      "mcp__claude-in-chrome__tabs*",
+      "SendMessage",
+      "ListAgents",
+      "Skill(handoff-broadcast)"
+    ],
+    "deny": [
+      "Read(//**/*.pem)",
+      "Read(//**/*.key)",
+      "Read(//c/Users/Zoher/.claude/.credentials.json)",
+      "Edit(//c/Users/Zoher/.claude/.credentials.json)",
+      "Bash(git push --force*)",
+      "PowerShell(git push --force*)",
+      "Read(.secrets)",
+      "Agent"
+    ]
+  },
+  "model": "sonnet",
+  "disableClaudeAiConnectors": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\Zoher\\.claude\\SESSION-INIT.ps1\" -Verify",
+            "timeout": 10000,
+            "statusMessage": "Checking Claude capability registry"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-check-update.js\""
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -lc \"/c/Users/Zoher/.claude/hooks/gsd-session-state.sh\""
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "test -d \"C:\\Users\\Zoher\\.claude\\skills\\clean-user-facing-text\" && echo 'watermarks-remover active' || true",
+            "timeout": 1
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\Zoher\\.claude\\overseer\\directive.py\"",
+            "timeout": 3000
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\Zoher\\.claude\\overseer\\prompt_master_gate.py\"",
+            "timeout": 3000
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\Zoher\\.claude\\overseer\\secure_build_gate.py\"",
+            "timeout": 3000
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/secure-write-scan.js\"",
+            "timeout": 5000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Edit|Write|MultiEdit|Agent|Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-context-monitor.js\"",
+            "timeout": 10
+          }
+        ]
+      },
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-read-injection-scanner.js\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -lc \"/c/Users/Zoher/.claude/hooks/gsd-graphify-update.sh\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -lc \"/c/Users/Zoher/.claude/hooks/gsd-phase-boundary.sh\"",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\Zoher\\.claude\\overseer\\metadata_telemetry.py\"",
+            "timeout": 2
+          }
+        ]
+      },
+      {
+        "matcher": "Bash|Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\Zoher\\.claude\\overseer\\route_marker.py\"",
+            "timeout": 3000
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "mcp__claude-in-chrome__*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -Command \"@{hookSpecificOutput=@{permissionDecision='allow'}} | ConvertTo-Json\"",
+            "statusMessage": "Chrome auto-allowed"
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\Zoher\\.claude\\overseer\\route_gate.py\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-context-monitor.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-context-monitor.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-context-monitor.js\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "FileChanged": [
+      {
+        "matcher": "config.json",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-config-reload.js\"",
+            "timeout": 8
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "\"C:/Program Files/nodejs/node.exe\" \"C:/Users/Zoher/.claude/hooks/gsd-statusline.js\""
+  },
+  "enabledPlugins": {
+    "ponytail@ponytail": true,
+    "flick@flick": true,
+    "cli-anything@cli-anything": true,
+    "google-cloud-developer@google-plugins": true,
+    "gemini-api@google-plugins": true
+  },
+  "extraKnownMarketplaces": {
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "flick": {
+      "source": {
+        "source": "github",
+        "repo": "Creatorberry/flick"
+      }
+    },
+    "cli-anything": {
+      "source": {
+        "source": "github",
+        "repo": "HKUDS/CLI-Anything"
+      }
+    },
+    "google-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "google/skills"
+      }
+    }
+  },
+  "effortLevel": "medium",
+  "modelSettings": {
+    "claude-sonnet-5": {
+      "effortLevel": "low"
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "agentPushNotifEnabled": true,
+  "version": "1.0",
+  "environment": {
+    "UNIFIED_SYSTEM": "enabled",
+    "BUNDLES_ENABLED": "true",
+    "OMNIROUTE_ENABLED": "false",
+    "QUALITY_GATES_ENABLED": "false",
+    "AUTO_BUNDLER_ENABLED": "false",
+    "OVERSEER_PATH": "~/.claude/overseer",
+    "BUNDLES_PATH": "~/.claude/skills"
+  },
+  "system_preferences": {
+    "bundle_strategy": "balanced",
+    "compression_target": 65,
+    "min_quality_score": 8.5,
+    "auto_bundle_new_items": false,
+    "monitor_all_tasks": false,
+    "log_metrics": false
+  }
+}

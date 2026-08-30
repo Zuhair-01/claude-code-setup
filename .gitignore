@@ -1,0 +1,6 @@
+**/.credentials.json
+**/*.pem
+**/*.key
+.env
+.env.*
+**/node_modules/

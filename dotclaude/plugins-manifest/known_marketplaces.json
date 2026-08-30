@@ -1,0 +1,98 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\claude-plugins-official",
+    "lastUpdated": "2026-08-30T19:42:37.459Z"
+  },
+  "thedotmack": {
+    "source": {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\thedotmack",
+    "lastUpdated": "2026-04-25T00:46:21.984Z"
+  },
+  "karpathy-skills": {
+    "source": {
+      "source": "github",
+      "repo": "forrestchang/andrej-karpathy-skills"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\karpathy-skills",
+    "lastUpdated": "2026-04-25T00:46:33.244Z"
+  },
+  "ui-ux-pro-max-skill": {
+    "source": {
+      "source": "github",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\ui-ux-pro-max-skill",
+    "lastUpdated": "2026-05-06T20:39:46.371Z"
+  },
+  "everything-claude-code": {
+    "source": {
+      "source": "github",
+      "repo": "affaan-m/everything-claude-code"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\everything-claude-code",
+    "lastUpdated": "2026-05-06T20:45:07.995Z"
+  },
+  "marketingskills": {
+    "source": {
+      "source": "github",
+      "repo": "coreyhaines31/marketingskills"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\marketingskills",
+    "lastUpdated": "2026-05-06T20:45:13.552Z"
+  },
+  "obsidian-skills": {
+    "source": {
+      "source": "github",
+      "repo": "kepano/obsidian-skills"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\obsidian-skills",
+    "lastUpdated": "2026-05-06T20:45:16.911Z"
+  },
+  "last30days-skill": {
+    "source": {
+      "source": "github",
+      "repo": "mvanhorn/last30days-skill"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\last30days-skill",
+    "lastUpdated": "2026-05-06T20:45:26.569Z"
+  },
+  "ponytail": {
+    "source": {
+      "source": "github",
+      "repo": "DietrichGebert/ponytail"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\ponytail",
+    "lastUpdated": "2026-08-18T12:17:27.315Z"
+  },
+  "flick": {
+    "source": {
+      "source": "github",
+      "repo": "Creatorberry/flick"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\flick",
+    "lastUpdated": "2026-08-21T20:07:13.477Z"
+  },
+  "cli-anything": {
+    "source": {
+      "source": "github",
+      "repo": "HKUDS/CLI-Anything"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\cli-anything",
+    "lastUpdated": "2026-08-25T12:57:46.299Z"
+  },
+  "google-plugins": {
+    "source": {
+      "source": "github",
+      "repo": "google/skills"
+    },
+    "installLocation": "C:\\Users\\Zoher\\.claude\\plugins\\marketplaces\\google-plugins",
+    "lastUpdated": "2026-08-27T16:32:37.310Z"
+  }
+}
